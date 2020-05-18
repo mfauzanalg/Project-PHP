@@ -1,12 +1,11 @@
 body{
     background-image: url("../img/back3.jpg");
-     /* Full height */
-    height: 100%;
 
     /* Center and scale the image nicely */
+    margin-left: -10px;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .jumbotron{
