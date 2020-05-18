@@ -12,8 +12,8 @@ body{
     box-shadow: 5px 10px 30px 5px grey;
     text-shadow: 3px 3px 3px snow;
     margin-top: 90px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 7%;
+    margin-right: 7%;
     background-image: url("../img/jumbo1.jpg");
     background-repeat: no-repeat;
     background-size: 1500px;
@@ -52,8 +52,8 @@ h3{
     background-color: white;
     padding-bottom: 50px;
     margin-bottom: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 7%;
+    margin-right: 7%;
     background-image: url("../img/back.jpg");
     background-repeat: no-repeat;
     background-size: 1100px;
@@ -64,6 +64,6 @@ h3{
     background-color: white;
     padding: 20px;
     margin-bottom: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 7%;
+    margin-right: 7%;
 }
