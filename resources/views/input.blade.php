@@ -57,4 +57,31 @@
             <button type="submit" class="btn btn-danger submit_button">Submit</button>
         </div>
     </div>
+    
+    <div class="data rounded">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                <th scope="col">Tanggal</th>
+                <th scope="col">Jam-Masuk</th>
+                <th scope="col">Jam-Keluar</th>
+                <th scope="col">Kendala</th>
+                <th scope="col">Pekerjaan</th>
+                <th scope="col">Waktu Kerja</th>
+                </tr>
+            </thead>
+
+            <tbody id = "output">
+                <tr>
+                    <td>12 Maret 2019</td>
+                    <td>13:30</td>
+                    <td>12:20</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, nobis architecto saepe odit vitae facere ab nihil veritatis distinctio, repellat fugit, delectus amet adipisci et quae molestiae quod pariatur quisquam.</td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo enim neque excepturi molestias nemo ex dignissimos ratione fugiat odit architecto? Nulla omnis aliquid eveniet! Ullam libero ut ab repellat numquam!</td>
+                    <td>Apa</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 @endsection

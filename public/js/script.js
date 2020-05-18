@@ -18,6 +18,8 @@ var dataController = (function(){
             var newData;
             newData = new Content(tanggal, masuk, keluar, kendala, pekerjaan, durasi);
             data.push(newData);
+            
+            return newData;
         }
     }
 })();
@@ -30,7 +32,8 @@ var UIController = (function(){
         submitButton: '.submit_button',
         inputMasuk: '.jam_masuk',
         inputKeluar: '.jam_keluar',
-        inputTanggal: '.tanggal'
+        inputTanggal: '.tanggal',
+        tableContent: '.table_content'
     };
 
     return{
@@ -42,6 +45,19 @@ var UIController = (function(){
                 jamKeluar: document.querySelector(DOMStrings.inputKeluar).value,
                 tanggal: document.querySelector(DOMStrings.inputTanggal).value
             }
+        },
+
+        addListData: function(obj){
+            var table, row;
+            table = document.getElementById('output');
+            row = table.insertRow(0);
+            row.insertCell(0).innerHTML = obj.tanggal;
+            row.insertCell(1).innerHTML = obj.masuk;
+            row.insertCell(2).innerHTML = obj.keluar;
+            row.insertCell(3).innerHTML = obj.pekerjaan;
+            row.insertCell(4).innerHTML = obj.kendala;
+            row.insertCell(5).innerHTML = obj.durasi;
+            
         },
 
         getDOMStrings: function(){
@@ -79,6 +95,14 @@ var controller = (function(dataCtrl, UICtrl){
 
         // Get the field input data
         input = UICtrl.getInput();
+        console.log(input.tanggal);
+
+        // Add the item to the data controller
+        newItem = dataCtrl.addData(input.tanggal, input.jamMasuk, input.jamKeluar, input.kendala, input.pekerjaan, 'nanti ada fungsi');
+        console.log(newItem);
+
+        // Add the item to the UI
+        UICtrl.addListData(newItem);
 
         // Clear Fields
         UICtrl.claerFields();
