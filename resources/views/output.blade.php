@@ -25,14 +25,14 @@
             </thead>
 
             <tbody>
-                <tr>
+                <!-- <tr>
                     <th scope="row">12 Maret 2019</th>
                     <td>13:30</td>
                     <td>12:20</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, nobis architecto saepe odit vitae facere ab nihil veritatis distinctio, repellat fugit, delectus amet adipisci et quae molestiae quod pariatur quisquam.</td>
                     <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo enim neque excepturi molestias nemo ex dignissimos ratione fugiat odit architecto? Nulla omnis aliquid eveniet! Ullam libero ut ab repellat numquam!</td>
                     <td>Apa</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
