@@ -95,7 +95,6 @@ var controller = (function(dataCtrl, UICtrl){
 
         // Get the field input data
         input = UICtrl.getInput();
-        console.log(input.tanggal);
 
         // Add the item to the data controller
         newItem = dataCtrl.addData(input.tanggal, input.jamMasuk, input.jamKeluar, input.kendala, input.pekerjaan, 'nanti ada fungsi');
@@ -120,3 +119,37 @@ var controller = (function(dataCtrl, UICtrl){
 })(dataController, UIController);
 
 controller.init();
+
+var Durasi = function(masuk, keluar){
+    var durasi, jamMasuk, jamKeluar, totalMasuk, totalKeluar, totalMinute;
+    jamMasuk = masuk.split(":");
+    jamKeluar = keluar.split(":");
+    totalMasuk = parseFloat(jamMasuk[0])*60 + parseFloat(jamMasuk[1]);
+    totalKeluar = parseFloat(jamKeluar[0])*60 + parseFloat(jamKeluar[1]);
+
+    totalMinute = totalKeluar - totalMasuk;
+
+    
+    return convertToHour(totalMinute);
+}
+
+var convertToHour = function(minutes){
+    var hour, minute, result;
+    hour = minute = "";
+    hour = Math.floor(minutes / 60);
+    minute = minutes % 60;
+    
+    if (hour == 0){
+        result = minute + " menit";
+    } else if (minute == 0){
+        result = hour + " jam";
+    } else if (hour == 0 && minute == 0){
+        result = "belum bekerja";
+    } else{
+        result = hour + " jam " + minute + " menit";
+    }
+
+    return result;
+}
+
+console.log(Durasi('16:23','17:23'));

@@ -68,7 +68,7 @@
                 <th scope="col">Jam-Keluar</th>
                 <th scope="col">Kendala</th>
                 <th scope="col">Pekerjaan</th>
-                <th scope="col">Waktu Kerja</th>
+                <th scope="col">Durasi Kerja</th>
                 </tr>
             </thead>
 

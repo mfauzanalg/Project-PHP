@@ -64,7 +64,7 @@
         
         <ul class="navbar-nav navbar-right">
             <li>
-                <button class="btn btn-danger my-2 my-sm-0">Author</button>
+                <a class="btn btn-danger my-2 my-sm-0" href="https://www.linkedin.com/in/mfauzanalg/">Author</a>
             </li>
         </ul>
     </div>
