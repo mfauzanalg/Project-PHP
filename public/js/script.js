@@ -132,7 +132,7 @@ var UIController = (function(){
 
         claerFields: function(){
             var fields, fieldsArr;
-            fields = document.querySelectorAll(DOMStrings.inputKendala + ', ' + DOMStrings.inputPekerjaan);
+            fields = document.querySelectorAll(DOMStrings.inputKendala + ', ' + DOMStrings.inputPekerjaan + ', ' + DOMStrings.inputMasuk + ', ' + DOMStrings.inputKeluar + ', ' + DOMStrings.inputTanggal);
             fieldsArr = Array.prototype.slice.call(fields); // Return array from list
             
             fieldsArr.forEach(function(current, index, array){

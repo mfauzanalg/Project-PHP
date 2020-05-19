@@ -29,7 +29,7 @@
                 </div>
                 <div class="timepicker"></div>  <!--Important to add and keep it seprate to the end-->
                 <div class="col-md-4">
-                    <h3>Jam Keluar</h3>
+                    <h3>Jam Pulang</h3>
                     <input id="timepkr2" style="width:200px;float:left;" class="form-control jam_keluar" placeholder="HH:MM" />
                     <button class="btn btn-danger" onclick="showpickers('timepkr2',24)" style="width:40px;float:left;"><i class="fa fa-clock-o"></i>
                 </div>
@@ -65,7 +65,7 @@
                 <tr>
                 <th scope="col">Tanggal</th>
                 <th scope="col">Jam-Masuk</th>
-                <th scope="col">Jam-Keluar</th>
+                <th scope="col">Jam-Pulang</th>
                 <th scope="col">Kendala</th>
                 <th scope="col">Pekerjaan</th>
                 <th scope="col">Durasi Kerja</th>
