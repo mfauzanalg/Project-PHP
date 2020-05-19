@@ -11,6 +11,61 @@ var dataController = (function(){
         this.durasi = durasi;
     }
 
+    var filterDurasiNormal = function(jamMasuk, jamKeluar){
+        var durasi, totalMasuk, totalKeluar;
+        if(jamMasuk[0] == 12 || jamMasuk[0] == 16 || jamMasuk[0] == 18){
+            jamMasuk[0]++;
+            jamMasuk[1] = 0;
+        }
+    
+        if(jamKeluar[0] == 12 || jamKeluar[0] == 16 || jamKeluar[0] == 18){
+            jamKeluar[0]++;
+            jamKeluar[1] = 0;
+        }
+    
+        totalMasuk = parseFloat(jamMasuk[0])*60 + parseFloat(jamMasuk[1]);
+        totalKeluar = parseFloat(jamKeluar[0])*60 + parseFloat(jamKeluar[1]);
+        durasi = totalKeluar - totalMasuk;
+    
+        if(jamMasuk[0] <= 12 && jamKeluar[0] >= 13){
+            durasi -= 60;
+        }
+        if(jamMasuk[0] <= 16 && jamKeluar[0] >= 17){
+            durasi -= 60;
+        }
+        if(jamMasuk[0] <= 18 && jamKeluar[0] >= 19){
+            durasi -= 60;
+        }
+    
+        return convertToHour(durasi);
+    
+    }
+    
+    var convertToHour = function(minutes){
+        if (minutes >= 0){
+            var hour, minute, result;
+            hour = minute = result = "";
+            hour = Math.floor(minutes / 60);
+            minute = minutes % 60;
+            if (hour == 0 && minute == 0){
+                result = "belum bekerja";
+            } else if (hour == 0){
+                result = minute + " menit";
+            } else if (minute == 0){
+                result = hour + " jam";
+            } else{
+                result = hour + " jam " + minute + " menit";
+            }
+            
+        } else if(minutes < 0){
+            result = "Tidak bisa bekerja melewati satu hari";
+        } else{
+            result = "";
+        }
+        
+        return result;
+    }
+
     var data = [];
 
     return{
@@ -20,7 +75,18 @@ var dataController = (function(){
             data.push(newData);
             
             return newData;
+        },
+
+        CalcDurasi : function(masuk, keluar){
+            var durasi, jamMasuk, jamKeluar;
+            jamMasuk = masuk.split(":");
+            jamKeluar = keluar.split(":");
+        
+            durasi = filterDurasiNormal(jamMasuk, jamKeluar);
+        
+            return durasi;
         }
+
     }
 })();
 
@@ -97,8 +163,7 @@ var controller = (function(dataCtrl, UICtrl){
         input = UICtrl.getInput();
 
         // Add the item to the data controller
-        newItem = dataCtrl.addData(input.tanggal, input.jamMasuk, input.jamKeluar, input.kendala, input.pekerjaan, 'nanti ada fungsi');
-        console.log(newItem);
+        newItem = dataCtrl.addData(input.tanggal, input.jamMasuk, input.jamKeluar, input.kendala, input.pekerjaan, dataCtrl.CalcDurasi(input.jamMasuk, input.jamKeluar));
 
         // Add the item to the UI
         UICtrl.addListData(newItem);
@@ -107,7 +172,7 @@ var controller = (function(dataCtrl, UICtrl){
         UICtrl.claerFields();
         
         // Alert
-        alert('Data tersubmit, silakan liat di halaman output');
+        alert('Data Tersubmit, silakan liat hasil pada table di bawah');
     };
 
     return{
@@ -119,37 +184,3 @@ var controller = (function(dataCtrl, UICtrl){
 })(dataController, UIController);
 
 controller.init();
-
-var Durasi = function(masuk, keluar){
-    var durasi, jamMasuk, jamKeluar, totalMasuk, totalKeluar, totalMinute;
-    jamMasuk = masuk.split(":");
-    jamKeluar = keluar.split(":");
-    totalMasuk = parseFloat(jamMasuk[0])*60 + parseFloat(jamMasuk[1]);
-    totalKeluar = parseFloat(jamKeluar[0])*60 + parseFloat(jamKeluar[1]);
-
-    totalMinute = totalKeluar - totalMasuk;
-
-    
-    return convertToHour(totalMinute);
-}
-
-var convertToHour = function(minutes){
-    var hour, minute, result;
-    hour = minute = "";
-    hour = Math.floor(minutes / 60);
-    minute = minutes % 60;
-    
-    if (hour == 0){
-        result = minute + " menit";
-    } else if (minute == 0){
-        result = hour + " jam";
-    } else if (hour == 0 && minute == 0){
-        result = "belum bekerja";
-    } else{
-        result = hour + " jam " + minute + " menit";
-    }
-
-    return result;
-}
-
-console.log(Durasi('16:23','17:23'));
