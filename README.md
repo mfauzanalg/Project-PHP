@@ -8,6 +8,7 @@ This project was created to fulfill the campuspedia internship porgram assignmen
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+
 ### Prerequisites
 
 things you need to install
@@ -16,10 +17,11 @@ things you need to install
 - Laravel
 - Composer to manage Laravel utilizes dependencies
 
-### Video Demo
-youtube link
 
-<a href = "bit.ly/FauzanInginInternship"> https://bit.ly/FauzanInginInternship </a>
+### Video Demo
+
+youtube link : <a href = "bit.ly/FauzanInginInternship"> bit.ly/FauzanInginInternship </a>
+
 
 
 ### Run The App
@@ -38,10 +40,12 @@ php artisan serve
 5. Open your browser
 6. Copy the local host link to your browser
 
+
 ## Built With
 
 - Laravel
 - JavaScript
+
 
 ## Use The App
 
@@ -50,6 +54,7 @@ php artisan serve
 2. Press Submit Button
 3. You can see the result in the output table
 ![output](/screenshot/output.png)
+
 
 ## References
 
