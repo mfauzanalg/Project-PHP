@@ -2,7 +2,7 @@
 
 This project was created to fulfill the campuspedia internship porgram assignment test
 
-![title](/screenshot/title.png)
+![title](/screenshot/title2.png)
 
 ## Getting Started
 
@@ -24,6 +24,8 @@ things you need to install
 ```
 php artisan serve
 ```
+![input](/screenshot/artisan.png)
+
 4. Open your browse
 5. Copy the local host link to your browser
 
