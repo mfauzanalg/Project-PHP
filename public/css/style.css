@@ -10,7 +10,7 @@ body{
 
 .jumbotron{
     box-shadow: 5px 10px 30px 5px grey;
-    text-shadow: 3px 3px 3px snow;
+    text-shadow: 3px 2px 3px snow;
     margin-top: 90px;
     margin-left: 7%;
     margin-right: 7%;
@@ -29,7 +29,8 @@ body{
 
 h3{
     color: #5f5f61;
-    font-size: medium;
+    font-size: large;
+    text-shadow: 1px 1px 3px snow;
     font-family: 'Balsamiq Sans', cursive;
 }
 
@@ -50,14 +51,24 @@ h3{
 
 .bg{
     box-shadow: 5px 10px 30px 10px grey;
-    background-color: white;
     padding-bottom: 50px;
     margin-bottom: 50px;
     margin-left: 7%;
     margin-right: 7%;
-    background-image: url("../img/back.jpg");
+    background-image: url("../img/back8.jpg");
     background-repeat: no-repeat;
-    background-size: 1100px;
+    background-size: 1300px;
+    background-position: right;
+}
+
+.about{
+    box-shadow: 5px 10px 30px 10px grey;
+    background-color: #fee9ea;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: justify;
 }
 
 .data{

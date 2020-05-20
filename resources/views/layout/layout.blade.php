@@ -58,7 +58,7 @@
                 <a class="nav-link" href="/">Restart</a> 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/output">About</a>
+                <a class="nav-link" href="/about">About</a>
             </li>
         </ul>
         

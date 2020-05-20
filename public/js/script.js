@@ -172,7 +172,7 @@ var controller = (function(dataCtrl, UICtrl){
         UICtrl.claerFields();
         
         // Alert
-        alert('Data Tersubmit, silakan liat hasil pada table di bawah');
+        alert('The data has been submitted, please look at the table below');
     };
 
     return{
