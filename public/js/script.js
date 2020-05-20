@@ -1,6 +1,6 @@
 console.log("fauzan");
 
-// dataController
+// dataController to create new data
 var dataController = (function(){
     var Content = function(tanggal, masuk, keluar, kendala, pekerjaan, durasi){
         this.tanggal = tanggal;
@@ -11,6 +11,7 @@ var dataController = (function(){
         this.durasi = durasi;
     }
 
+    // Filter for break time
     var filterDurasiNormal = function(jamMasuk, jamKeluar){
         var durasi, totalMasuk, totalKeluar;
         if(jamMasuk[0] == 12 || jamMasuk[0] == 16 || jamMasuk[0] == 18){
@@ -41,6 +42,7 @@ var dataController = (function(){
     
     }
     
+    // Convert minutes given to hour and minute format
     var convertToHour = function(minutes){
         if (minutes >= 0){
             var hour, minute, result;
@@ -69,6 +71,7 @@ var dataController = (function(){
     var data = [];
 
     return{
+        // Add data to data[]
         addData: function(tanggal, masuk, keluar, kendala, pekerjaan, durasi){
             var newData;
             newData = new Content(tanggal, masuk, keluar, kendala, pekerjaan, durasi);
@@ -77,6 +80,7 @@ var dataController = (function(){
             return newData;
         },
 
+        // Calculate duration from jam masuk dan jam pulang
         CalcDurasi : function(masuk, keluar){
             var durasi, jamMasuk, jamKeluar;
             jamMasuk = masuk.split(":");
@@ -90,8 +94,9 @@ var dataController = (function(){
     }
 })();
 
-// UIController
+// User Interface Controller
 var UIController = (function(){
+    // DOM selector
     var DOMStrings = {
         inputKendala: '.input_kendala',
         inputPekerjaan: '.input_pekerjaan',
@@ -103,6 +108,7 @@ var UIController = (function(){
     };
 
     return{
+        // Get string from input fields
         getInput: function(){
             return{
                 kendala: document.querySelector(DOMStrings.inputKendala).value,
@@ -113,6 +119,7 @@ var UIController = (function(){
             }
         },
 
+        // Insert data to the output table
         addListData: function(obj){
             var table, row;
             table = document.getElementById('output');
@@ -130,7 +137,8 @@ var UIController = (function(){
             return DOMStrings;
         },
 
-        claerFields: function(){
+        // Clear fields after user press Submit button
+        clearFields: function(){
             var fields, fieldsArr;
             fields = document.querySelectorAll(DOMStrings.inputKendala + ', ' + DOMStrings.inputPekerjaan + ', ' + DOMStrings.inputMasuk + ', ' + DOMStrings.inputKeluar + ', ' + DOMStrings.inputTanggal);
             fieldsArr = Array.prototype.slice.call(fields); // Return array from list
@@ -145,6 +153,7 @@ var UIController = (function(){
 
 // Global App Controller
 var controller = (function(dataCtrl, UICtrl){
+    // Submit using submit button or by pressing enter key
     var setupEventListener = function(){
         var DOM = UIController.getDOMStrings();
 
@@ -156,6 +165,7 @@ var controller = (function(dataCtrl, UICtrl){
         });
     };
 
+    // Add Item to database and UI
     var ctrlAddItem = function (){
         var input, newItem;
 
@@ -169,7 +179,7 @@ var controller = (function(dataCtrl, UICtrl){
         UICtrl.addListData(newItem);
 
         // Clear Fields
-        UICtrl.claerFields();
+        UICtrl.clearFields();
         
         // Alert
         alert('The data has been submitted, please look at the table below');
@@ -183,4 +193,5 @@ var controller = (function(dataCtrl, UICtrl){
 
 })(dataController, UIController);
 
+// Initialize App
 controller.init();

@@ -2,7 +2,6 @@
 
 @section('title', 'Home')
 
-
 @section('content')
     <!-- Jumbotron -->
     <div class="jumbotron text-center p-3 mb-5 bg-white rounded">
@@ -12,16 +11,19 @@
       </div>
     </div>
 
-    
+    <!-- Input Fields -->
     <div class="bg p-3 mb-5 bg-white rounded">
         <div class="full">
             <div class="row time">
                 <div class="col-md-4">
                     <div class="dates" style="color:#white;">
+                        <!-- Data Input Field -->
                         <h3>Tanggal</h3>
                             <input type="text" style="width:200px;background-color:#whute;" class="form-control tanggal" id="usr1" name="event_date" placeholder="YYYY-MM-DD" autocomplete="off" >
                     </div>
                 </div>
+
+                <!-- Time Input Field -->
                 <div class="col-md-4">
                     <h3>Jam Masuk</h3>
                     <input id="timepkr" style="width:200px;float:left;" class="form-control jam_masuk" placeholder="HH:MM" />
@@ -39,6 +41,7 @@
     
         <br><br>
 
+        <!-- Work Description -->
         <div class="form-group time">
             <h3>Deskripsi Pekerjaan</h3>
             <input type="text" class="input_pekerjaan form-control" placeholder="Pekerjaan"></textarea>
@@ -46,6 +49,7 @@
 
         <br>
 
+        <!-- obstacles encountered -->
         <div class="form-group time">
             <h3>Kendala yang dihadapi</h3>
             <input type="text" class="input_kendala form-control" placeholder="Kendala"></input>
@@ -53,6 +57,7 @@
    
         <br>
 
+        <!-- Submit Button -->
         <div class="container pad">    
             <button type="submit" class="btn btn-danger submit_button">Submit</button>
         </div>
