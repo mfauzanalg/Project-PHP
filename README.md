@@ -28,9 +28,13 @@ youtube link : <a href = "bit.ly/FauzanInginInternship"> bit.ly/FauzanInginInter
 
 1. Start Apache in XAMPP Control Panel
 <img src="/screenshot/XAMPP.PNG" alt="XAMPP" width="600"/>
+
 2. Download this project
+
 3. Open Terminal in this folder
+
 4. Run this command
+
 ```
 php artisan serve
 ```
@@ -51,7 +55,9 @@ php artisan serve
 
 1. Enter the input according to the format provided 
 ![input](/screenshot/input.png)
+
 2. Press Submit Button
+
 3. You can see the result in the output table
 ![output](/screenshot/output.png)
 
