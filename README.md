@@ -18,17 +18,19 @@ things you need to install
 
 ### Run The App
 
-1. Download this project
-2. Open Terminal in this folder
-3. Run this command
+1. Start Apache in XAMPP Control Panel
+<img src="/screenshot/XAMPP.png" alt="XAMPP" width="600"/>
+2. Download this project
+3. Open Terminal in this folder
+4. Run this command
 ```
 php artisan serve
 ```
 
 <img src="/screenshot/artisan.png" alt="artisan" width="600"/>
 
-4. Open your browse
-5. Copy the local host link to your browser
+5. Open your browse
+6. Copy the local host link to your browser
 
 ## Built With
 
