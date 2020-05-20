@@ -45,7 +45,7 @@
     <nav class="shadow-lg navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #16817b;">
     <a class="navbar-brand">
         <img src="https://cdn.clipart.email/623d2ac2b844be0e664e54b414166ae3_letter-f-logo-png-picture-729936-letter-f-logo-png_900-900.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Laravel Project
+        Laravel Project 
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
