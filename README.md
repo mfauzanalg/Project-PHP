@@ -24,7 +24,8 @@ things you need to install
 ```
 php artisan serve
 ```
-![input](/screenshot/artisan.png)
+
+<img src="/screenshot/artisan.png" alt="artisan" width="600"/>
 
 4. Open your browse
 5. Copy the local host link to your browser
@@ -40,7 +41,7 @@ php artisan serve
 ![input](/screenshot/input.png)
 2. Press Submit Button
 3. You can see the result in the output table
-![input](/screenshot/output.png)
+![output](/screenshot/output.png)
 
 ## References
 
