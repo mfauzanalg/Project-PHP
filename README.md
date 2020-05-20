@@ -16,6 +16,12 @@ things you need to install
 - Laravel
 - Composer to manage Laravel utilizes dependencies
 
+### Video Demo
+youtube link
+
+<a href = "bit.ly/FauzanInginInternship"> https://bit.ly/FauzanInginInternship </a>
+
+
 ### Run The App
 
 1. Start Apache in XAMPP Control Panel
@@ -29,7 +35,7 @@ php artisan serve
 
 <img src="/screenshot/artisan.png" alt="artisan" width="600"/>
 
-5. Open your browse
+5. Open your browser
 6. Copy the local host link to your browser
 
 ## Built With
