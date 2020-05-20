@@ -19,7 +19,7 @@ things you need to install
 ### Run The App
 
 1. Start Apache in XAMPP Control Panel
-<img src="/screenshot/XAMPP.png" alt="XAMPP" width="600"/>
+<img src="/screenshot/XAMPP.PNG" alt="XAMPP" width="600"/>
 2. Download this project
 3. Open Terminal in this folder
 4. Run this command
