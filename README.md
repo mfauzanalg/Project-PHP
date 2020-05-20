@@ -16,7 +16,7 @@ things you need to install
 - Laravel
 - Composer to manage Laravel utilizes dependencies
 
-### Installing
+### Run The App
 
 1. Download this project
 2. Open Terminal in this folder
@@ -35,7 +35,7 @@ php artisan serve
 - Laravel
 - JavaScript
 
-## Run The Program
+## Use The App
 
 1. Enter the input according to the format provided 
 ![input](/screenshot/input.png)
