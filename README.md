@@ -20,9 +20,8 @@ things you need to install
 
 ### Video Demo
 
-youtube link : <a href = "bit.ly/FauzanInginInternship"> bit.ly/FauzanInginInternship </a>
-
-
+youtube link : 
+https://youtu.be/NzJGABgMvlY
 
 ### Run The App
 
